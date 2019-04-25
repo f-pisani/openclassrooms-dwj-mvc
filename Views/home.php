@@ -33,6 +33,7 @@ var_dump(Request::method());
 var_dump(Request::code());
 var_dump(Request::query());
 var_dump(Request::route());
+var_dump(Request::assoc('id,test,tmp'));
 var_dump($_SERVER);
 ?>
 </pre>
