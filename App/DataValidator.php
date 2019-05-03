@@ -220,6 +220,7 @@ class DataValidator
 		switch ($ruleType)
 		{
 			case 'set': $param = "[".implode(',', $param)."]"; break;
+			case 'exec': $param = ($param instanceof \Closure) ? "closure" : $param; break;
 		}
 
 		$msg = str_replace('#Key#', $key, $msg);
